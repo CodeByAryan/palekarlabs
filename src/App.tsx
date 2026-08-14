@@ -10,7 +10,7 @@ type InquiryForm = {
 
 const navItems = [
   { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
+  { label: 'Get a Mockup', href: '#mockup' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -33,30 +33,6 @@ const services = [
     price: 'Starting ₹18,000',
     description: 'A website plus a booking or member-management system built in.',
     features: ['Online booking flows', 'Member access tools', 'Automated reminders', 'Integrated management panel'],
-  },
-]
-
-const portfolioItems = [
-  {
-    title: 'Meditiya Sathi',
-    description: 'Community and society management portal for resident communication and operations.',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80',
-    demoLink: 'https://example.com/meditiya-sathi-demo',
-    details: ['Resident management', 'Building/wing management', 'Festival planning', 'Donations & payment tracking', 'PDF receipts', 'WhatsApp integration'],
-  },
-  {
-    title: 'Clinic appointment booking',
-    description: 'Appointment and consultation workflow for a local healthcare practice.',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80',
-    demoLink: 'https://example.com/clinic-booking-demo',
-    details: ['Appointments', 'Doctor schedules', 'Patient records', 'Reminder follow-ups'],
-  },
-  {
-    title: 'Coaching institute management',
-    description: 'Student tracking and admin control for batches, fees, and attendance.',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80',
-    demoLink: 'https://example.com/coaching-management-demo',
-    details: ['Course management', 'Batch tracking', 'Fees and attendance', 'Student dashboard'],
   },
 ]
 
@@ -184,10 +160,10 @@ function App() {
                   Start a project
                 </a>
                 <a
-                  href="#work"
+                  href="#mockup"
                   className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-base font-medium text-slate-100 transition hover:border-white/25 hover:bg-white/10"
                 >
-                  See our work
+                  Get a mockup
                 </a>
               </div>
 
@@ -292,72 +268,54 @@ function App() {
           </div>
         </section>
 
-        <section id="work" className="bg-slate-950/60 py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 max-w-2xl">
-              <p className="text-sm font-medium uppercase tracking-[0.28em] text-blue-200">Work</p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.05em] text-white sm:text-4xl">Selected projects built to solve real operational problems.</h2>
-            </div>
+        <section id="mockup" className="bg-slate-950/60 py-20">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 sm:p-10">
+              <p className="text-sm font-medium uppercase tracking-[0.28em] text-blue-200">Get a free mockup</p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.05em] text-white sm:text-4xl">
+                Not sure what you need? Get a free mockup — no obligation.
+              </h2>
+              <p className="mt-5 max-w-2xl text-lg text-slate-300">
+                Message us about your business, get a free mockup or consultation within 24–48 hours, and decide afterward if you want to move forward.
+              </p>
 
-            <article className="mb-8 overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/80">
-              <div className="grid gap-0 lg:grid-cols-[1.1fr_0.9fr]">
-                <div className="bg-slate-950/80 p-6 sm:p-8">
-                  <img
-                    src="https://images.unsplash.com/photo-1553028826-f4801b2d2f9f?auto=format&fit=crop&w=1200&q=80"
-                    alt="Meditiya Sathi dashboard mockup"
-                    className="h-full min-h-[260px] w-full rounded-[1.5rem] object-cover"
-                  />
-                </div>
-                <div className="p-6 sm:p-8">
-                  <p className="text-xs uppercase tracking-[0.24em] text-blue-200">Featured case study</p>
-                  <h3 className="mt-4 text-3xl font-semibold text-white">Meditiya Sathi</h3>
-                  <p className="mt-4 text-slate-300">
-                    A community and society management system that simplifies resident communication, payments, and everyday admin work.
-                  </p>
-
-                  <div className="mt-6 space-y-3 text-sm text-slate-200">
-                    {portfolioItems[0].details.map((item) => (
-                      <div key={item} className="flex items-start gap-3">
-                        <span className="mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <a
-                    href={portfolioItems[0].demoLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-8 inline-flex rounded-full bg-gradient-to-r from-blue-600 to-violet-600 px-5 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(99,102,241,0.4)] transition hover:brightness-110"
-                  >
-                    View demo
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <div className="grid gap-6 md:grid-cols-2">
-              {portfolioItems.slice(1).map((item) => (
-                <article key={item.title} className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-900/80">
-                  <img src={item.image} alt={item.title} className="h-52 w-full object-cover" />
-                  <div className="p-6">
-                    <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
-                    <p className="mt-3 text-slate-300">{item.description}</p>
-                    <div className="mt-5 flex items-center justify-between gap-4">
-                      <div className="flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.14em] text-slate-400">
-                        {item.details.slice(0, 2).map((detail) => (
-                          <span key={detail} className="rounded-full border border-white/10 px-2 py-1">
-                            {detail}
-                          </span>
-                        ))}
-                      </div>
-                      <a href={item.demoLink} target="_blank" rel="noreferrer" className="text-sm font-medium text-blue-300 hover:text-blue-200">
-                        View demo
-                      </a>
+              <div className="mt-8 grid gap-4 md:grid-cols-3">
+                {[
+                  'Message us your business type',
+                  'We send a free mockup/consultation',
+                  'You decide if you want to move forward',
+                ].map((step, index) => (
+                  <div key={step} className="rounded-2xl border border-white/10 bg-[#101827] p-5">
+                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-violet-600 text-sm font-semibold text-white">
+                      0{index + 1}
                     </div>
+                    <p className="text-base text-slate-200">{step}</p>
                   </div>
-                </article>
-              ))}
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <button
+                  type="button"
+                  onClick={openWhatsApp}
+                  className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-violet-600 px-6 py-3 text-base font-medium text-white shadow-[0_0_20px_rgba(99,102,241,0.4)] transition hover:brightness-110"
+                >
+                  DM us on WhatsApp
+                </button>
+                <a
+                  href="https://www.instagram.com/palekarlabs/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-base font-medium text-slate-100 transition hover:border-white/25 hover:bg-white/10"
+                >
+                  DM us on Instagram
+                </a>
+              </div>
+
+              <div className="mt-6 space-y-2 text-sm text-slate-300">
+                <p>Custom-built for your business — not a template.</p>
+                <p>Transparent, upfront pricing.</p>
+              </div>
             </div>
           </div>
         </section>
@@ -372,6 +330,9 @@ function App() {
               </p>
               <p className="mt-4 text-lg text-slate-300">
                 Based in the Mumbai/Thane region, we work directly with clinics, housing societies, coaching institutes, shops, and other local businesses to create systems that are practical, reliable, and easy to use.
+              </p>
+              <p className="mt-4 text-lg text-slate-300">
+                I’ve built real operational tools already, including a full community/society management system with resident management, festival &amp; donation tracking, admin dashboards, and WhatsApp integration.
               </p>
             </div>
           </div>
