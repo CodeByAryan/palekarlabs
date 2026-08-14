@@ -86,7 +86,8 @@ function App() {
   }
 
   const openWhatsApp = () => {
-    const link = 'https://wa.me/919876543210?text=' + encodeURIComponent("Hi, I'd like to know more about your services")
+    const phoneNumber = '918928221297'
+    const link = `https://wa.me/${phoneNumber}?text=${encodeURIComponent("Hi, I'd like to know more about your services")}`
     window.open(link, '_blank', 'noopener,noreferrer')
   }
 
@@ -405,11 +406,11 @@ function App() {
                   <span>WhatsApp</span>
                   <span className="text-sm">Start a conversation</span>
                 </button>
-                <a href="mailto:hello@palekarlabs.com" className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-left text-slate-200 transition hover:bg-white/10">
+                <a href="mailto:codebyaryan01@gmail.com" className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-left text-slate-200 transition hover:bg-white/10">
                   <span>Email</span>
-                  <span className="text-sm">hello@palekarlabs.com</span>
+                  <span className="text-sm">codebyaryan01@gmail.com</span>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-left text-slate-200 transition hover:bg-white/10">
+                <a href="https://www.instagram.com/palekarlabs/" target="_blank" rel="noreferrer" className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-left text-slate-200 transition hover:bg-white/10">
                   <span>Instagram</span>
                   <span className="text-sm">@palekarlabs</span>
                 </a>
@@ -512,8 +513,8 @@ function App() {
           </div>
 
           <div className="flex items-center gap-4 text-slate-300">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-white">Instagram</a>
-            <a href="mailto:hello@palekarlabs.com" className="hover:text-white">Email</a>
+            <a href="https://www.instagram.com/palekarlabs/" target="_blank" rel="noreferrer" className="hover:text-white">Instagram</a>
+            <a href="mailto:codebyaryan01@gmail.com" className="hover:text-white">Email</a>
             <a href="#contact" className="hover:text-white">Contact</a>
           </div>
 
